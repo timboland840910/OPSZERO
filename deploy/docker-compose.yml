@@ -2,6 +2,11 @@ version: "3.9"
 
 services:
 
+  nats:
+    image: nats:latest
+    ports:
+      - "4222:4222"
+
   api-gateway:
     build: ../services/api-gateway
     ports:
@@ -9,16 +14,21 @@ services:
     depends_on:
       - intelligence-engine
       - event-engine
+      - nats
 
   intelligence-engine:
     build: ../services/intelligence-engine
     ports:
       - "8001:8000"
+    depends_on:
+      - nats
 
   event-engine:
     build: ../services/event-engine
     ports:
       - "8002:8000"
+    depends_on:
+      - nats
 
   monitoring:
     build: ../services/monitoring
