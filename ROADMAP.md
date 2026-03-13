@@ -1,41 +1,35 @@
-# Project Roadmap for OPSZERO
+# OPSZERO Roadmap
 
-## Current Date: 2026-03-13
+This document describes the development roadmap for the OPSZERO platform.
 
-### Project Milestones:
-1. **Initial Research** - Completed by Q1 2026
-2. **Prototype Development** - Completed by Q2 2026
-3. **Alpha Testing** - Completed by Q3 2026
-4. **Beta Release** - Completed by Q4 2026
-5. **Official Launch** - Planned for Q1 2027
+## Phase 1 — Foundation
 
-### Planned Features:
-- User Authentication
-- Real-time Data Processing
-- Custom Reporting Tools
-- Integration with Third-party APIs
-- Mobile Application Support
+* Define the platform architecture
+* Create repository structure
+* Setup initial microservices
+* Implement API Gateway
 
-### Development Phases:
-- **Phase 1: Planning & Design**  
-  Conduct thorough research and finalize project design concepts.  
-  **Duration:** Q1 2026
+## Phase 2 — Core Services
 
-- **Phase 2: Development of Core Features**  
-  Focus on building user authentication and data processing features.  
-  **Duration:** Q2 2026
+* Authentication service
+* Event engine for service communication
+* Data layer and database integration
+* Docker containerization
 
-- **Phase 3: Testing & Feedback**  
-  Launch alpha version for internal testing and gather feedback.  
-  **Duration:** Q3 2026
+## Phase 3 — Platform Capabilities
 
-- **Phase 4: Public Beta**  
-  Release beta version to a limited audience to further enhance features.  
-  **Duration:** Q4 2026
+* Monitoring and observability
+* Security architecture
+* Logging and tracing
+* Internal messaging system
 
-- **Phase 5: Launch Preparation**  
-  Final adjustments based on beta feedback, leading up to launch.  
-  **Duration:** Q1 2027
+## Phase 4 — Cloud Infrastructure
 
-### Conclusion:
-This roadmap will be updated regularly as milestones are reached and feedback is collected.
+* Kubernetes deployment
+* Infrastructure automation
+* CI/CD pipelines
+* Horizontal scaling
+
+## Long-Term Vision
+
+OPSZERO aims to become a modular distributed platform designed to experiment with modern microservices architecture, event-driven systems, and scalable cloud infrastructure.
