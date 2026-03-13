@@ -1,11 +1,23 @@
-# Architecture Folder Purpose
+# AGP Platform Architecture
 
-The "architecture" folder is designated for the documentation related to system design and architecture of the OPSZERO project. This includes:
+AGP Platform is a distributed system built by AGP Technologies.
 
-1. **High-Level Design Diagrams**: Visual representations of the overall system architecture, including components and interactions.
-2. **Detailed Technical Specifications**: In-depth documents that explain how different modules interact with each other, protocols used, data flow, and technology selections.
-3. **Design Principles**: Guidelines and best practices followed during the architectural design process to ensure maintainability, scalability, and performance of the system.
-4. **Change Logs**: Records of any changes made to the architecture over time, allowing for a clear history and rationale behind architectural decisions.
-5. **Integration Guidelines**: Documentation on how to integrate with external services or libraries, outlining necessary configurations and dependencies.
+The platform follows a microservices and event-driven architecture designed for scalability, automation, and intelligent orchestration.
 
-This folder serves as a key resource for both new and existing team members, ensuring that the architectural vision is communicated clearly and effectively.
+## Core Components
+
+### API Gateway
+Handles all external requests and routes them to internal services.
+
+### Intelligence Engine
+Provides decision making, automation, and AI driven processes.
+
+### Event Engine
+Handles asynchronous event communication between services.
+
+### Monitoring
+Provides observability, metrics, logging, and system health tracking.
+
+## Infrastructure
+
+The platform is designed to run in containerized environments using modern infrastructure tooling.
