@@ -1,14 +1,79 @@
+# ---------------------------
 # Python
+# ---------------------------
 __pycache__/
 *.py[cod]
-*.pyo
-.pytest_cache/
+*$py.class
 
-# Editor directories and files
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Python build
+build/
+dist/
+*.egg-info/
+
+# ---------------------------
+# Environment variables
+# ---------------------------
+.env
+.env.*
+*.env
+
+# ---------------------------
+# Logs
+# ---------------------------
+*.log
+logs/
+*.out
+
+# ---------------------------
+# OS files
+# ---------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------
+# IDE / Editors
+# ---------------------------
 .vscode/
 .idea/
+*.swp
+*.swo
 
+# ---------------------------
 # Docker
-Dockerfile
-docker-compose.yml
-.docker/**/
+# ---------------------------
+docker-compose.override.yml
+*.pid
+*.seed
+
+# ---------------------------
+# Kubernetes
+# ---------------------------
+*.kubeconfig
+
+# ---------------------------
+# Testing / coverage
+# ---------------------------
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ---------------------------
+# Node (si frontend plus tard)
+# ---------------------------
+node_modules/
+npm-debug.log
+
+# ---------------------------
+# Security
+# ---------------------------
+secrets/
+keys/
+*.pem
+*.key
+*.crt
