@@ -1,43 +1,28 @@
 from fastapi import FastAPI
-from typing import List
-import datetime
+import asyncio
+from nats.aio.client import Client as NATS
 
 app = FastAPI(
     title="AGP Event Engine",
-    description="Event processing and communication service",
     version="1.0.0"
 )
 
-event_store: List[dict] = []
+nc = NATS()
 
+@app.on_event("startup")
+async def connect_nats():
+    await nc.connect("nats://nats:4222")
 
 @app.get("/")
 def root():
-    return {
-        "service": "AGP Event Engine",
-        "status": "running",
-        "timestamp": datetime.datetime.utcnow()
-    }
-
+    return {"service": "AGP Event Engine", "status": "running"}
 
 @app.post("/event")
-def publish_event(event_type: str, payload: str):
-    event = {
-        "type": event_type,
-        "payload": payload,
-        "timestamp": datetime.datetime.utcnow()
-    }
-
-    event_store.append(event)
+async def publish_event(event_type: str, payload: str):
+    message = f"{event_type}:{payload}"
+    await nc.publish("agp.events", message.encode())
 
     return {
-        "message": "event published",
-        "event": event
-    }
-
-
-@app.get("/events")
-def get_events():
-    return {
-        "events": event_store
+        "status": "event published",
+        "event": message
     }
